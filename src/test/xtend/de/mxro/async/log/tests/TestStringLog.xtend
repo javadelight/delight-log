@@ -7,6 +7,7 @@ import org.junit.Test
 
 import static extension de.mxro.async.log.tests.TestStringLog.*
 
+
 @JUnit
 class TestStringLog {
 
