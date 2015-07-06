@@ -1,10 +1,12 @@
-# Async Log
+# delight-log
 
-[Async Log](https://github.com/mxro/async-log) is a minimal implementation for asynchronous logging in Java.
+Delight Log is a minimal implementation for asynchronous logging in Java.
 
 **Why**: To provide a logging implementation works well in multi-threaded environments with minimal performance impact.
 
 **What Not**: This library is very feature-poor by design to keep it maintainable and portable.  
+
+This project is part of [Java Delight](https://github.com/javadelight/delight-main#java-delight-suite).
 
 ## Usage
 
@@ -95,11 +97,10 @@ This project is compatible with the following environments:
 
 ## Further Resources
 
-- [JavaDocs](http://modules.appjangle.com/async-log/latest/apidocs/)
-- [Project Reports](http://modules.appjangle.com/async-log/latest/project-reports.html)
-- [Rendered README](http://documentup.com/mxro/async-log)
-- [ReadTheDocs](http://async-log.rtfd.org/)
+- [JavaDocs](http://modules.appjangle.com/delight-log/latest/apidocs/)
+- [Project Reports](http://modules.appjangle.com/delight-log/latest/project-reports.html)
+- [Rendered README](http://documentup.com/javadelight/delight-log)
 
-[![Documentation Status](https://readthedocs.org/projects/async-log/badge/?version=latest)](https://readthedocs.org/projects/async-log/?badge=latest)
+
   
 
