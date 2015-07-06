@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/javadelight/delight-log.svg)](https://travis-ci.org/javadelight/delight-log)
+
 # delight-log
 
 Delight Log is a minimal implementation for asynchronous logging in Java.
@@ -67,8 +69,8 @@ PropertyNode limitedLog = Logs.create(20);
 
 ```xml
 <dependency>
-    <groupId>de.mxro.async.log</groupId>
-	<artifactId>async-log</artifactId>
+    <groupId>org.javadelight</groupId>
+	<artifactId>delight-log</artifactId>
 	<version>[latest version]</version>
 </dependency>
 ```
