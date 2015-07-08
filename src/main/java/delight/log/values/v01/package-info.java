@@ -4,4 +4,4 @@
  * @author <a href="http://maxrohde.com">Max Rohde</a>
  *
  */
-package org.javadelight.log.values.v01;
+package delight.log.values.v01;

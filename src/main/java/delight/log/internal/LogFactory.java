@@ -1,9 +1,8 @@
-package org.javadelight.log.internal;
+package delight.log.internal;
 
 import delight.async.properties.PropertyFactory;
-
-import org.javadelight.log.values.StringLog;
-import org.javadelight.log.values.v01.StringLogData;
+import delight.log.values.StringLog;
+import delight.log.values.v01.StringLogData;
 
 public class LogFactory implements PropertyFactory {
 

@@ -1,4 +1,4 @@
-package org.javadelight.log;
+package delight.log;
 
 import delight.factories.Configuration;
 

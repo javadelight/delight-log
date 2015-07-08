@@ -1,4 +1,4 @@
-package org.javadelight.log.values;
+package delight.log.values;
 
 import java.util.List;
 

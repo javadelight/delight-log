@@ -1,9 +1,8 @@
-package org.javadelight.log.internal.operations;
+package delight.log.internal.operations;
 
 import delight.async.properties.PropertyData;
 import delight.async.properties.operations.PropertyOperationWithId;
-
-import org.javadelight.log.values.StringLog;
+import delight.log.values.StringLog;
 
 public class WriteEntryOperation extends PropertyOperationWithId<String> {
 

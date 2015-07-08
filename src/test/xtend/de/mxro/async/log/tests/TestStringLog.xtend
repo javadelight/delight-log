@@ -1,7 +1,7 @@
 package de.mxro.async.log.tests
 
-import org.javadelight.log.jre.Logs
-import org.javadelight.log.values.StringLog
+import delight.log.jre.Logs
+import delight.log.values.StringLog
 import de.oehme.xtend.junit.JUnit
 import org.junit.Test
 

@@ -3,4 +3,4 @@
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
  */
-package org.javadelight.log.jre;
+package delight.log.jre;

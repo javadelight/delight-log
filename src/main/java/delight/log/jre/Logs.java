@@ -1,4 +1,4 @@
-package org.javadelight.log.jre;
+package delight.log.jre;
 
 import delight.async.properties.PropertiesCommon;
 import delight.async.properties.PropertyNode;
@@ -6,9 +6,8 @@ import delight.async.properties.jre.Properties;
 import delight.factories.Configuration;
 import delight.factories.Dependencies;
 import delight.factories.Factory;
-
-import org.javadelight.log.LogsCommon;
-import org.javadelight.log.LogsConfiguration;
+import delight.log.LogsCommon;
+import delight.log.LogsConfiguration;
 
 public class Logs extends LogsCommon {
 

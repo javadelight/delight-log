@@ -1,4 +1,4 @@
-package org.javadelight.log;
+package delight.log;
 
 import delight.async.properties.PropertiesCommon;
 import delight.async.properties.PropertyFactory;
@@ -7,9 +7,8 @@ import delight.async.properties.PropertyOperation;
 import delight.factories.Configuration;
 import delight.factories.Dependencies;
 import delight.factories.Factory;
-
-import org.javadelight.log.internal.LogFactory;
-import org.javadelight.log.internal.operations.WriteEntryOperation;
+import delight.log.internal.LogFactory;
+import delight.log.internal.operations.WriteEntryOperation;
 
 /**
  * <p>
