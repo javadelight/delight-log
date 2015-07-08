@@ -1,4 +1,4 @@
-package de.mxro.async.log;
+package org.javadelight.log;
 
 import delight.async.properties.PropertiesCommon;
 import delight.async.properties.PropertyFactory;
@@ -8,8 +8,8 @@ import delight.factories.Configuration;
 import delight.factories.Dependencies;
 import delight.factories.Factory;
 
-import de.mxro.async.log.internal.LogFactory;
-import de.mxro.async.log.internal.operations.WriteEntryOperation;
+import org.javadelight.log.internal.LogFactory;
+import org.javadelight.log.internal.operations.WriteEntryOperation;
 
 /**
  * <p>

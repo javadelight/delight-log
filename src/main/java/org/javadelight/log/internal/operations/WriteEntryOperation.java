@@ -1,9 +1,9 @@
-package de.mxro.async.log.internal.operations;
+package org.javadelight.log.internal.operations;
 
 import delight.async.properties.PropertyData;
 import delight.async.properties.operations.PropertyOperationWithId;
 
-import de.mxro.async.log.values.StringLog;
+import org.javadelight.log.values.StringLog;
 
 public class WriteEntryOperation extends PropertyOperationWithId<String> {
 

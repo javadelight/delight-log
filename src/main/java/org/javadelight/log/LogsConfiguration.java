@@ -1,4 +1,4 @@
-package de.mxro.async.log;
+package org.javadelight.log;
 
 import delight.factories.Configuration;
 

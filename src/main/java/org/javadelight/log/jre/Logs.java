@@ -1,4 +1,4 @@
-package de.mxro.async.log.jre;
+package org.javadelight.log.jre;
 
 import delight.async.properties.PropertiesCommon;
 import delight.async.properties.PropertyNode;
@@ -7,8 +7,8 @@ import delight.factories.Configuration;
 import delight.factories.Dependencies;
 import delight.factories.Factory;
 
-import de.mxro.async.log.LogsCommon;
-import de.mxro.async.log.LogsConfiguration;
+import org.javadelight.log.LogsCommon;
+import org.javadelight.log.LogsConfiguration;
 
 public class Logs extends LogsCommon {
 

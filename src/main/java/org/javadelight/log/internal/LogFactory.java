@@ -1,9 +1,9 @@
-package de.mxro.async.log.internal;
+package org.javadelight.log.internal;
 
 import delight.async.properties.PropertyFactory;
 
-import de.mxro.async.log.values.StringLog;
-import de.mxro.async.log.values.v01.StringLogData;
+import org.javadelight.log.values.StringLog;
+import org.javadelight.log.values.v01.StringLogData;
 
 public class LogFactory implements PropertyFactory {
 

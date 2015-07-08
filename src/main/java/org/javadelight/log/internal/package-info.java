@@ -3,4 +3,4 @@
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
  */
-package de.mxro.async.log.internal;
+package org.javadelight.log.internal;

@@ -1,4 +1,4 @@
-package de.mxro.async.log.values;
+package org.javadelight.log.values;
 
 import java.util.List;
 

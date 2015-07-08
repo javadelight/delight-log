@@ -1,7 +1,5 @@
 package de.mxro.async.log.tests;
 
-import de.mxro.async.log.jre.Logs;
-import de.mxro.async.log.values.StringLog;
 import de.oehme.xtend.junit.JUnit;
 import delight.async.properties.PropertyNode;
 import delight.async.properties.PropertyOperation;
@@ -12,6 +10,8 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.IntegerRange;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;
 import org.hamcrest.Matcher;
+import org.javadelight.log.jre.Logs;
+import org.javadelight.log.values.StringLog;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.internal.ArrayComparisonFailure;

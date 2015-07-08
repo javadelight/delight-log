@@ -1,4 +1,4 @@
-package de.mxro.async.log.values.v01;
+package org.javadelight.log.values.v01;
 
 import delight.async.properties.values.ExplicitInstanceOf;
 
@@ -6,7 +6,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.mxro.async.log.values.StringLog;
+import org.javadelight.log.values.StringLog;
+
 import de.mxro.json.JSON;
 import de.mxro.json.JSONArray;
 import de.mxro.json.ToJSON;

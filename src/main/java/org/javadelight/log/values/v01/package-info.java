@@ -4,4 +4,4 @@
  * @author <a href="http://maxrohde.com">Max Rohde</a>
  *
  */
-package de.mxro.async.log.values.v01;
+package org.javadelight.log.values.v01;
