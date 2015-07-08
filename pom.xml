@@ -12,7 +12,7 @@
 			org.junit,
 			*
 		</module.importedPackages>
-		<module.exportedPackages>!de.mxro.async.log.internal*,de.mxro.async.log*
+		<module.exportedPackages>!delight.log.internal*,delight.log*
 		</module.exportedPackages>
 		<module.serviceDefinitions>
 		</module.serviceDefinitions>

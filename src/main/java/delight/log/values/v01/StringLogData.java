@@ -1,15 +1,14 @@
 package delight.log.values.v01;
 
 import delight.async.properties.values.ExplicitInstanceOf;
+import delight.json.JSON;
+import delight.json.JSONArray;
+import delight.json.ToJSON;
 import delight.log.values.StringLog;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
-import de.mxro.json.JSON;
-import de.mxro.json.JSONArray;
-import de.mxro.json.ToJSON;
 
 public class StringLogData implements ExplicitInstanceOf, Serializable, StringLog, ToJSON {
 
