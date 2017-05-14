@@ -2,8 +2,12 @@ package de.mxro.async.log.tests;
 
 import de.oehme.xtend.junit.JUnit;
 import delight.async.properties.PropertyNode;
+import delight.async.properties.PropertyOperation;
+import delight.functional.Success;
 import delight.log.jre.Logs;
 import delight.log.values.StringLog;
+import delight.promise.Promise;
+import java.util.List;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.IntegerRange;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;
@@ -18,12 +22,19 @@ public class TestStringLog {
   @Test
   public void test() {
     final PropertyNode log = Logs.create();
-    log.<String>record(Logs.string("log1", "entry 1"));
-    log.<String>record(Logs.string("log1", "entry 2"));
-    log.<String>record(Logs.string("log1", "entry 3"));
-    int _size = log.<StringLog>retrieve("log1", StringLog.class).get().entries().size();
+    PropertyOperation<String> _string = Logs.string("log1", "entry 1");
+    log.<String>record(_string);
+    PropertyOperation<String> _string_1 = Logs.string("log1", "entry 2");
+    log.<String>record(_string_1);
+    PropertyOperation<String> _string_2 = Logs.string("log1", "entry 3");
+    log.<String>record(_string_2);
+    Promise<StringLog> _retrieve = log.<StringLog>retrieve("log1", StringLog.class);
+    StringLog _get = _retrieve.get();
+    List<String> _entries = _get.entries();
+    int _size = _entries.size();
     TestStringLog.<Integer, Integer>operator_doubleArrow(Integer.valueOf(_size), Integer.valueOf(3));
-    log.stop().get();
+    Promise<Success> _stop = log.stop();
+    _stop.get();
   }
   
   @Test
@@ -31,15 +42,23 @@ public class TestStringLog {
     final PropertyNode log = Logs.create(20);
     IntegerRange _upTo = new IntegerRange(1, 100);
     for (final Integer i : _upTo) {
-      log.<String>record(Logs.string("log1", ("entry " + i)));
+      PropertyOperation<String> _string = Logs.string("log1", ("entry " + i));
+      log.<String>record(_string);
     }
-    int _size = log.<StringLog>retrieve("log1", StringLog.class).get().entries().size();
+    Promise<StringLog> _retrieve = log.<StringLog>retrieve("log1", StringLog.class);
+    StringLog _get = _retrieve.get();
+    List<String> _entries = _get.entries();
+    int _size = _entries.size();
     boolean _lessThan = (_size < 21);
     TestStringLog.<Boolean, Boolean>operator_doubleArrow(Boolean.valueOf(_lessThan), Boolean.valueOf(true));
-    int _size_1 = log.<StringLog>retrieve("log1", StringLog.class).get().entries().size();
+    Promise<StringLog> _retrieve_1 = log.<StringLog>retrieve("log1", StringLog.class);
+    StringLog _get_1 = _retrieve_1.get();
+    List<String> _entries_1 = _get_1.entries();
+    int _size_1 = _entries_1.size();
     boolean _greaterThan = (_size_1 > 8);
     TestStringLog.<Boolean, Boolean>operator_doubleArrow(Boolean.valueOf(_greaterThan), Boolean.valueOf(true));
-    log.stop().get();
+    Promise<Success> _stop = log.stop();
+    _stop.get();
   }
   
   @Test
@@ -53,7 +72,8 @@ public class TestStringLog {
             IntegerRange _upTo = new IntegerRange(1, 20);
             for (final Integer i : _upTo) {
               {
-                log.<String>record(Logs.string("log1", ("t1 entry " + i)));
+                PropertyOperation<String> _string = Logs.string("log1", ("t1 entry " + i));
+                log.<String>record(_string);
                 Thread.sleep(1);
                 Thread.yield();
               }
@@ -70,7 +90,8 @@ public class TestStringLog {
             IntegerRange _upTo = new IntegerRange(1, 20);
             for (final Integer i : _upTo) {
               {
-                log.<String>record(Logs.string("log1", ("t2 entry " + i)));
+                PropertyOperation<String> _string = Logs.string("log1", ("t2 entry " + i));
+                log.<String>record(_string);
                 Thread.sleep(1);
                 Thread.yield();
               }
@@ -87,7 +108,8 @@ public class TestStringLog {
             IntegerRange _upTo = new IntegerRange(1, 20);
             for (final Integer i : _upTo) {
               {
-                log.<String>record(Logs.string("log1", ("t3 entry " + i)));
+                PropertyOperation<String> _string = Logs.string("log1", ("t3 entry " + i));
+                log.<String>record(_string);
                 Thread.sleep(1);
                 Thread.yield();
               }
@@ -104,7 +126,10 @@ public class TestStringLog {
             IntegerRange _upTo = new IntegerRange(1, 10);
             for (final Integer i : _upTo) {
               {
-                int _size = log.<StringLog>retrieve("log1", StringLog.class).get().entries().size();
+                Promise<StringLog> _retrieve = log.<StringLog>retrieve("log1", StringLog.class);
+                StringLog _get = _retrieve.get();
+                List<String> _entries = _get.entries();
+                int _size = _entries.size();
                 boolean _lessThan = (_size < 21);
                 TestStringLog.<Boolean, Boolean>operator_doubleArrow(Boolean.valueOf(_lessThan), Boolean.valueOf(true));
                 Thread.sleep(2);
@@ -124,13 +149,20 @@ public class TestStringLog {
       t2.join();
       t2.join();
       t1.join();
-      int _size = log.<StringLog>retrieve("log1", StringLog.class).get().entries().size();
+      Promise<StringLog> _retrieve = log.<StringLog>retrieve("log1", StringLog.class);
+      StringLog _get = _retrieve.get();
+      List<String> _entries = _get.entries();
+      int _size = _entries.size();
       boolean _lessThan = (_size < 20);
       TestStringLog.<Boolean, Boolean>operator_doubleArrow(Boolean.valueOf(_lessThan), Boolean.valueOf(true));
-      int _size_1 = log.<StringLog>retrieve("log1", StringLog.class).get().entries().size();
+      Promise<StringLog> _retrieve_1 = log.<StringLog>retrieve("log1", StringLog.class);
+      StringLog _get_1 = _retrieve_1.get();
+      List<String> _entries_1 = _get_1.entries();
+      int _size_1 = _entries_1.size();
       boolean _greaterThan = (_size_1 > 5);
       TestStringLog.<Boolean, Boolean>operator_doubleArrow(Boolean.valueOf(_greaterThan), Boolean.valueOf(true));
-      log.stop().get();
+      Promise<Success> _stop = log.stop();
+      _stop.get();
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
