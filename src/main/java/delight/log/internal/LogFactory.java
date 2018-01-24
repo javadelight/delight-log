@@ -15,7 +15,7 @@ public class LogFactory implements PropertyFactory {
 
     @SuppressWarnings("unchecked")
     @Override
-    public <T> T create(final Class<T> type) {
+    public <T> T create(final String id, final Class<T> type) {
 
         if (type.equals(StringLog.class)) {
             return (T) new StringLogData(defaultMaxCapacity);
